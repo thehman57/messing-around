@@ -140,7 +140,7 @@ void del()
     cin >> d;
 
 
-    while (list != NULL)
+    for (list; list != NULL; list = list->next)
     {
         if (list->number == d)
         {
@@ -179,7 +179,7 @@ void del()
             break;
         }
         // iterate through the linked list
-        list = list->next;
+        //list = list->next;
     }
     // go back to beginning of list
     while (list->prev != NULL)
