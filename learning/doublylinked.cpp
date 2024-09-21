@@ -19,11 +19,14 @@ node *list = NULL;
 // prototypes
 void append();
 void output();
+void del();
 
 
 int main()
 {
+    int again = 0;
     char cont = 'Y';
+
     cout << "This is practice with linked lists." << endl;
 
     append();
@@ -41,6 +44,27 @@ int main()
     } while (cont == 'Y');
 
     output();
+
+    cont = 'Y';
+
+    do
+    {
+        cout << endl << "Would you like to delete a number?" << endl;
+        cin >> cont;
+        cont = toupper(cont);
+
+        if (cont == 'Y')
+        {
+            again ++;
+            del();
+        }
+    } while (cont == 'Y');
+
+    if (again != 0)
+    {
+        output();
+    }
+
 
     return 0;
 }
@@ -74,7 +98,6 @@ void output()
 
     //going next
     cout << endl << endl;
-    cout << "NULL" << endl;
     while(list != NULL)
     {
         cout << list->number << endl;
@@ -106,4 +129,62 @@ void output()
         }
     }
     cout << "NULL" << endl;
+}
+
+void del()
+{
+    int d;
+
+    // picking the number to delete
+    cout << "Please input the number you would like to delete: " << endl;
+    cin >> d;
+
+
+    while (list != NULL)
+    {
+        if (list->number == d)
+        {
+            // if first item in list
+            if (list->prev == NULL)
+            {
+                list = list->next;
+                list->prev->next = NULL;
+                list->prev = NULL;
+                break;
+            }
+
+            //if last item in list
+            else if (list->next == NULL)
+            {
+                list = list->prev;
+                list->next->prev = NULL;
+                list->next = NULL;
+                break;
+            }
+
+            //if in middle
+            else
+            {
+                list->prev->next = list->next;
+                list->next->prev = list->prev;
+                list = list->next;
+                break;
+            }
+        }
+        //if we don't find the number
+        if (list->next == NULL)
+        {
+            cout << "Number not found." << endl;
+            break;
+        }
+
+        // iterate through the linked list
+        list = list->next;
+    }
+
+    // go back to beginning of list
+    while (list->prev != NULL)
+    {
+        list = list->prev;
+    }
 }
