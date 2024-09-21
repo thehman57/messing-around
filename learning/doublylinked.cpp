@@ -97,7 +97,7 @@ void output()
     //TODO: Output the new linked list
 
     //going next
-    cout << endl << endl;
+    cout << endl << endl << "NULL" << endl;
     while(list != NULL)
     {
         cout << list->number << endl;
@@ -150,24 +150,25 @@ void del()
                 list = list->next;
                 list->prev->next = NULL;
                 list->prev = NULL;
+                cout << d << " deleted." << endl;
                 break;
             }
-
             //if last item in list
             else if (list->next == NULL)
             {
                 list = list->prev;
                 list->next->prev = NULL;
                 list->next = NULL;
+                cout << d << " deleted." << endl;
                 break;
             }
-
             //if in middle
             else
             {
                 list->prev->next = list->next;
                 list->next->prev = list->prev;
                 list = list->next;
+                cout << d << " deleted." << endl;
                 break;
             }
         }
@@ -177,11 +178,9 @@ void del()
             cout << "Number not found." << endl;
             break;
         }
-
         // iterate through the linked list
         list = list->next;
     }
-
     // go back to beginning of list
     while (list->prev != NULL)
     {
