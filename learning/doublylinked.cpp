@@ -104,6 +104,7 @@ void output()
         cout << "next" << endl;
         if (list->next != NULL)
         {
+            // go to next
             list = list->next;
         }
         else
@@ -121,6 +122,7 @@ void output()
         cout << "prev" << endl;
         if (list->prev != NULL)
         {
+            //go to prev
             list = list->prev;
         }
         else
@@ -144,7 +146,7 @@ void del()
     {
         if (list->number == d)
         {
-            // if first item in list, make pointers skip over a node. but edges must be null 
+            // if first item in list, make pointers skip over a node. but edges must be null
             if (list->prev == NULL)
             {
                 list = list->next;
