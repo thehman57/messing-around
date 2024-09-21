@@ -144,7 +144,7 @@ void del()
     {
         if (list->number == d)
         {
-            // if first item in list
+            // if first item in list, make pointers skip over a node. but edges must be null 
             if (list->prev == NULL)
             {
                 list = list->next;
@@ -153,7 +153,7 @@ void del()
                 cout << d << " deleted." << endl;
                 break;
             }
-            //if last item in list
+            //if last item in list, make pointers skip over a node. but edges must be null
             else if (list->next == NULL)
             {
                 list = list->prev;
@@ -162,7 +162,7 @@ void del()
                 cout << d << " deleted." << endl;
                 break;
             }
-            //if in middle
+            //if in middle, make pointers skip over a node
             else
             {
                 list->prev->next = list->next;
@@ -178,8 +178,6 @@ void del()
             cout << "Number not found." << endl;
             break;
         }
-        // iterate through the linked list
-        //list = list->next;
     }
     // go back to beginning of list
     while (list->prev != NULL)
