@@ -74,6 +74,7 @@ void output()
 
     //going next
     cout << endl << endl;
+    cout << "NULL" << endl;
     while(list != NULL)
     {
         cout << list->number << endl;
