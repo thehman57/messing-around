@@ -33,6 +33,8 @@ int main()
             append();
         }
     } while (cont == 'Y');
+
+    
 }
 
 unsigned int keygen(string name)
