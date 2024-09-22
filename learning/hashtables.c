@@ -12,12 +12,13 @@ typedef struct node
     string name;
 }node;
 
+
 unsigned int keygen(string name);
 void append(string name, int key);
 
 int main()
 {
-    cout << "This is a test to see if I know how hashtables work." << endl;
+    cout << "This is a test to see if I know how hashtables work." << endl << endl;
     char cont ='Y';
     do
     {
