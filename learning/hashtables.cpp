@@ -9,7 +9,6 @@ typedef struct node
 {
     string name;
     struct node *next;
-    struct node *tables[26];
 } node;
 
 unsigned int num(string name);
@@ -67,11 +66,11 @@ void append()
 
     key = num(name);
 
-    node *n[key] = {(node*)malloc(sizeof(node))};
+    node *n = (node*)malloc(sizeof(node));
 
-    n[key]->name = name;
-    n[key]->next = list[key];
+    n->name = name;
+    n->next = list[key];
 
-    list[key] = n[key];
+    list[key] = n;
 }
 
