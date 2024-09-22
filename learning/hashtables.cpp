@@ -40,11 +40,11 @@ int main()
         cout << "Would you like to see a section of the list? (Y/N)" << endl;
         cin >> cont;
         cont = toupper(cont);
-        if (cont == "Y")
+        if (cont == 'Y')
         {
             output();
         }
-    }
+    } while (cont == 'Y');
 }
 
 unsigned int keygen(string name)
@@ -63,12 +63,12 @@ void append()
 
     key = keygen(name);
 
-    node *n[key] = (node*)malloc(sizeof(node));
+    node *n[key] = {(node*)malloc(sizeof(node))};
 
     // append to list
-    n->name = name;
-    n->table = list;
-    list = n;
+    n[key]->name = name;
+    n[key]->table = list[key];
+    list[key] = n[key];
 }
 
 void output()
