@@ -14,10 +14,10 @@ typedef struct node
 
 // prototypes
 unsigned int keygen(string name);
-void append(string name, int key);
+void append();
 
 // global vars
-node *list[26] = NULL;
+node *list[26] = [NULL];
 
 int main()
 {
