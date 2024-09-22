@@ -63,7 +63,7 @@ void append()
 
     key = keygen(name);
 
-    node *n[key] = {(node*)malloc(sizeof(node))};
+    node *n[key] = {(node*)malloc(sizeof(node) * table[key])};
 
     // append to list
     n[key]->name = name;
