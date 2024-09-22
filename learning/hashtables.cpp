@@ -51,5 +51,8 @@ void append()
 
     key = keygen(name);
 
-    node *n[key] == (node*)malloc(sizeof(node));
+    node *n[key] = (node*)malloc(sizeof(node));
+
+    n->name = name;
+    n->
 }
