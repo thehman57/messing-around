@@ -34,7 +34,7 @@ int main()
     do
     {
         cout << "Add another number?" << endl;
-        cin >> cont;
+        cin >> cont;lea
         cont = toupper(cont);
 
         if (cont == 'Y')
