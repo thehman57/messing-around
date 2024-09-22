@@ -15,6 +15,7 @@ typedef struct node
 // prototypes
 unsigned int keygen(string name);
 void append();
+void output();
 
 // global vars, also new syntax yay
 node *list[26] = {NULL};
@@ -34,7 +35,16 @@ int main()
         }
     } while (cont == 'Y');
 
-    
+    do
+    {
+        cout << "Would you like to see a section of the list? (Y/N)" << endl;
+        cin >> cont;
+        cont = toupper(cont);
+        if (cont == "Y")
+        {
+            output();
+        }
+    }
 }
 
 unsigned int keygen(string name)
@@ -55,8 +65,15 @@ void append()
 
     node *n[key] = (node*)malloc(sizeof(node));
 
+    // append to list
     n->name = name;
     n->table = list;
-
     list = n;
+}
+
+void output()
+{
+    // integer for which hash do i unlock??
+    int key;
+
 }
