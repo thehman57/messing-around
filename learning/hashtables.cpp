@@ -74,6 +74,17 @@ void append()
 void output()
 {
     // integer for which hash do i unlock??
+    // char for the correct hash key
     int key;
+    string unlock;
+
+    // pick the key
+    cout << "What letter section would you like to go through?" << endl;
+    cin >> unlock;
+
+    key = keygen(unlock);
+
+    cout << key;
+
 
 }
