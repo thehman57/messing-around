@@ -52,7 +52,7 @@ int main()
     return 0;
 }
 
-unsigned int key(string name)
+unsigned int num(string name)
 {
     return toupper(name[0]) - 'A';
 }
@@ -65,7 +65,7 @@ void append()
     cout << "Please input a name for the list:" << endl;
     cin >> name;
 
-    key = key(name);
+    key = num(name);
 
     node *n[key] = {(node*)malloc(sizeof(node))};
 
