@@ -54,5 +54,7 @@ void append()
     node *n[key] = (node*)malloc(sizeof(node));
 
     n->name = name;
-    n->
+    n->table = list;
+
+    list = n;
 }
