@@ -37,10 +37,19 @@ int main()
 
 unsigned int keygen(string name)
 {
-
+    return toupper(name) - 'A';
 }
 
 void append()
 {
-    string name
+    // key for pointer, string to get key
+    int key;
+    string name;
+
+    cout << "Please input a name:" << endl;
+    cin >> name;
+
+    key = keygen(name);
+
+    cout << key;
 }
