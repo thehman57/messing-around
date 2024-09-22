@@ -67,7 +67,7 @@ void append()
 
     key = num(name);
 
-    node *n = {(node*)malloc(sizeof(node))};
+    node *n[key] = {(node*)malloc(sizeof(node))};
 
     n[key]->name = name;
     n[key]->next = list[key];
