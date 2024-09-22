@@ -25,7 +25,7 @@ int main()
     char cont ='Y';
     do
     {
-        cout << "Would you like to add a name?" << endl;
+        cout << "Would you like to add a name? (Y/N)" << endl;
         cin >> cont;
         cont = toupper(cont);
         if (cont == 'Y')
@@ -42,5 +42,5 @@ unsigned int keygen(string name)
 
 void append()
 {
-    
+    string name
 }
