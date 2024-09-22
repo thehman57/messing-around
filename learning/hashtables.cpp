@@ -12,8 +12,12 @@ typedef struct node
     string name;
 }node;
 
+// prototypes
 unsigned int keygen(string name);
 void append(string name, int key);
+
+// global vars
+node *list[26] = NULL;
 
 int main()
 {
@@ -22,6 +26,12 @@ int main()
     do
     {
         cout << "Would you like to add a name?" << endl;
+        cin >> cont;
+        cont = toupper(cont);
+        if (cont == 'Y')
+        {
+
+        }
     } while (cont == 'Y');
 }
 
