@@ -17,7 +17,7 @@ unsigned int keygen(string name);
 void append();
 
 // global vars
-node *list[26] = NULL;
+node *list = NULL;
 
 int main()
 {
