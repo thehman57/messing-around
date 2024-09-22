@@ -74,3 +74,8 @@ void append()
     list[key] = n;
 }
 
+void output
+{
+    
+}
+
