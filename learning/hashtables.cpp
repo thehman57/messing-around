@@ -16,8 +16,8 @@ typedef struct node
 unsigned int keygen(string name);
 void append();
 
-// global vars
-node *list = NULL;
+// global vars, also new syntax yay
+node *list[26] = {NULL};
 
 int main()
 {
@@ -51,5 +51,5 @@ void append()
 
     key = keygen(name);
 
-    cout << key;
+    node *n[key] == (node*)malloc(sizeof(node));
 }
