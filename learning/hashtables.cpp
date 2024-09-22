@@ -30,7 +30,7 @@ int main()
         cont = toupper(cont);
         if (cont == 'Y')
         {
-
+            append();
         }
     } while (cont == 'Y');
 }
@@ -40,7 +40,7 @@ unsigned int keygen(string name)
 
 }
 
-void append(string name, int key)
+void append()
 {
 
 }
