@@ -13,7 +13,7 @@ typedef struct node
 
 unsigned int num(string name);
 void append();
-//void output();
+void output();
 
 node *list[26] = {NULL};
 
@@ -43,7 +43,7 @@ int main()
 
         if (cont == 'Y')
         {
-            //output();
+            output();
         }
 
     } while (cont == 'Y');
