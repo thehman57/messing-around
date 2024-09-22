@@ -19,3 +19,7 @@ int main()
 }
 
 unsigned int keygen()
+{
+
+}
+
