@@ -12,9 +12,9 @@ typedef struct node
     struct node *tables[26];
 } node;
 
-unsigned int key(string name);
+unsigned int num(string name);
 void append();
-void output();
+//void output();
 
 node *list[26] = {NULL};
 
@@ -44,7 +44,7 @@ int main()
 
         if (cont == 'Y')
         {
-            output();
+            //output();
         }
 
     } while (cont == 'Y');
@@ -67,9 +67,9 @@ void append()
 
     key = num(name);
 
-    node *n[key] = {(node*)malloc(sizeof(node))};
+    node *n = {(node*)malloc(sizeof(node))};
 
-    n[key]->name[key] = name;
+    n[key]->name = name;
     n[key]->next = list[key];
 
     list[key] = n[key];
