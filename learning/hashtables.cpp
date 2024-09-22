@@ -79,6 +79,25 @@ void output()
     int unlock;
     string door;
 
-    cout <<
+    cout << "Input a letter you would like to search through:" << endl;
+    cin >> door;
+
+    unlock = num(door);
+
+    if (list[unlock] == NULL)
+    {
+        cout << "No one found here." << endl;
+    }
+    else
+    {
+        for (list[unlock]; list[unlock] != NULL; list[unlock] = list[unlock]->next)
+        {
+            cout << list[unlock]->name << endl;
+            if (list[unlock]->next == NULL)
+            {
+                break;
+            }
+        }
+    }
 }
 
