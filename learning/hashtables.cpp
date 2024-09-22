@@ -76,6 +76,9 @@ void append()
 
 void output()
 {
-    
+    int unlock;
+    string door;
+
+    cout <<
 }
 
