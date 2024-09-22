@@ -67,7 +67,7 @@ void append()
 
     // append to list
     n[key]->name = name;
-    n[key]->table = list[key];
+    n[key]->table[key] = list[key];
     list[key] = n[key];
 }
 
