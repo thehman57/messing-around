@@ -10,8 +10,8 @@ typedef struct node
     string name;
 }node;
 
-unsigned int keygen();
-void append();
+unsigned int keygen(string name);
+void append(string name, int key);
 
 int main()
 {
