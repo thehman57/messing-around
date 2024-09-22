@@ -12,7 +12,6 @@ typedef struct node
     string name;
 }node;
 
-
 unsigned int keygen(string name);
 void append(string name, int key);
 
@@ -22,7 +21,7 @@ int main()
     char cont ='Y';
     do
     {
-
+        cout << "Would you like to add a name?" << endl;
     } while (cont == 'Y');
 }
 
