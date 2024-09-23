@@ -35,6 +35,11 @@ int main()
     {
         cout << "Would you like to add a word to the trie?" < endl;
         cin >> cont;
+
+        if (cont == 'Y')
+        {
+            
+        }
     }while (cont == 'Y');
 }
 
