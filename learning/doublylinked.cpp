@@ -136,6 +136,7 @@ void output()
 void del()
 {
     int d;
+    node *n = NULL;
 
     // picking the number to delete
     cout << "Please input the number you would like to delete: " << endl;
@@ -149,28 +150,39 @@ void del()
             // if first item in list, make pointers skip over a node. but edges must be null
             if (list->prev == NULL)
             {
+
+                n = list;
                 list = list->next;
                 list->prev->next = NULL;
                 list->prev = NULL;
                 cout << d << " deleted." << endl;
+
+                free(n);
                 break;
             }
             //if last item in list, make pointers skip over a node. but edges must be null
             else if (list->next == NULL)
             {
+
+                n = list;
                 list = list->prev;
                 list->next->prev = NULL;
                 list->next = NULL;
                 cout << d << " deleted." << endl;
+
+                free(n);
                 break;
             }
             //if in middle, make pointers skip over a node
             else
             {
+                n = list;
                 list->prev->next = list->next;
                 list->next->prev = list->prev;
                 list = list->next;
                 cout << d << " deleted." << endl;
+
+                free(n);
                 break;
             }
         }
