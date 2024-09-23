@@ -19,12 +19,30 @@ typedef struct trie
 } trie;
 
 
-//global variable
+//global pointer variable
 trie *list[MAX_LENGTH][26] = {NULL};
 
+//prototypes
+unsigned int direct(string name, int letter); // this will be used to get paths
+void append();
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    char cont = 'Y';
+    cout << "This is a test on my knowledge of tries." << endl << endl;
+
+    do
+    {
+        cout << "Would you like to add a word to the trie?"
+    }while (cont == 'Y');
 }
 
+unsigned int direct(string name, int letter)
+{
+
+}
+
+void append()
+{
+
+}
