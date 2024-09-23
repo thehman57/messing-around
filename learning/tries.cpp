@@ -33,7 +33,8 @@ int main()
 
     do
     {
-        cout << "Would you like to add a word to the trie?"
+        cout << "Would you like to add a word to the trie?" < endl;
+        cin >> cont;
     }while (cont == 'Y');
 }
 
