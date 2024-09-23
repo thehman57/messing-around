@@ -33,12 +33,12 @@ int main()
 
     do
     {
-        cout << "Would you like to add a word to the trie?" < endl;
+        cout << "Would you like to add a word to the trie?" << endl;
         cin >> cont;
 
         if (cont == 'Y')
         {
-            
+            append();
         }
     }while (cont == 'Y');
 }
@@ -50,5 +50,6 @@ unsigned int direct(string name, int letter)
 
 void append()
 {
+    string word;
 
 }
