@@ -55,5 +55,8 @@ void append()
     cout << "Please input a word you would like to validate:" << endl;
     cin >> word;
 
-    for ()
+    for (int letter = 0; letter < strlen(word); letter++)
+    {
+        
+    }
 }
