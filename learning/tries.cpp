@@ -13,7 +13,7 @@ const int MAX_LENGTH = 45; // pneumonoultramicroscopicsilicovolcanoconiosis is 4
 // trying to make a trie data structure
 typedef struct trie
 {
-    string word[MAX_LENGTH];
+    string number[11]; // 11 digits in a phone number
     struct trie *paths[26]; // 26 is the amount of letters in the alphabet
     bool isEnd = false;
 } trie;
@@ -33,7 +33,7 @@ int main()
 
     do
     {
-        cout << "Would you like to add a word to the trie?" << endl;
+        cout << "Would you like to add a name to the trie?" << endl;
         cin >> cont;
 
         if (cont == 'Y')
@@ -45,17 +45,17 @@ int main()
 
 unsigned int direct(string name, int letter)
 {
-
+    return toupper(name[letter]) - 'A';
 }
 
 void append()
 {
-    string word;
+    string name;
 
-    cout << "Please input a word you would like to validate:" << endl;
-    cin >> word;
+    cout << "Please input a name you would like to validate:" << endl;
+    cin >> name;
 
-    for (int letter = 0; letter < strlen(word); letter++)
+    for (int letter = 0; letter < strlen(name); letter++)
     {
         
     }
