@@ -18,6 +18,7 @@ typedef struct trie
 void append();
 unsigned int letter(string word, int x);
 void search();
+void kill();
 
 // global var
 trie *root = new trie(); // allocate memory as to have a root
@@ -50,6 +51,19 @@ int main()
         if (cont == 'Y')
         {
             search();
+        }
+    } while (cont == 'Y');
+
+    do
+    {
+        cout << "Would you like to delete something?" << endl;
+        cin >> cont;
+        cont = toupper(cont);
+
+        if (cont == 'Y')
+        {
+            kill();
+            main();
         }
     } while (cont == 'Y');
 }
@@ -126,7 +140,7 @@ void search()
     return;
 }
 
-void delete()
+void kill()
 {
     // open is the number door we will unlock , word simply gives me the key
     int open;
