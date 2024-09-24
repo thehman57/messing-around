@@ -57,13 +57,13 @@ void append()
     cin >> word;
 
     trie *n = root;
-    n = n->child;
     for(int x = 0; x < size(word); x ++)
     {
         door = letter(word, x);
-        if (n == NULL)
+        if (n->child[door] == NULL)
         {
-            n->character = word[0];
+            n = n->child[door];
+            n->character = word[x];
         }
     }
 
