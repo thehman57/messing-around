@@ -6,21 +6,16 @@
 
 using namespace std;
 
-
-// longest word, const allows you to use it for arrays
-const int MAX_LENGTH = 45; // pneumonoultramicroscopicsilicovolcanoconiosis is 45 letters long
-
 // trying to make a trie data structure
 typedef struct trie
 {
-    string number[11]; // 11 digits in a phone number
     struct trie *paths[26]; // 26 is the amount of letters in the alphabet
     bool isEnd = false;
 } trie;
 
 
 //global pointer variable
-trie *list[MAX_LENGTH][26] = {NULL};
+trie *list[26] = {NULL};
 
 //prototypes
 unsigned int direct(string name, int letter); // this will be used to get paths
@@ -65,7 +60,7 @@ void append()
         if (list[letter][path] == NULL)
         {
             trie *n = (trie*)malloc(sizeof(trie));
-            
+
         }
         else
         {
