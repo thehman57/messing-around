@@ -17,9 +17,10 @@ typedef struct trie
 // prototypes
 void append();
 unsigned int letter(string word, int letter);
+void search();
 
 // global var
-trie *root = (trie*)malloc(sizeof(trie));
+trie *root = (trie*)malloc(sizeof(trie)); // allocate memory as to have a root
 
 
 int main()
@@ -56,7 +57,8 @@ void append()
     cout << "Please input a word to add to this list: " << endl;
     cin >> word;
 
-    trie *n = root;
+    trie *n = root; // get n back to the root
+
     for(int x = 0; x < size(word); x ++)
     {
         door = letter(word, x);
@@ -73,6 +75,11 @@ void append()
         }
     }
     n->isEnd = true;
+}
+
+void search()
+{
+    
 }
 
 
