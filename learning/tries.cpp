@@ -19,7 +19,7 @@ void append();
 unsigned int letter(string word, int letter);
 
 // global var
-trie *trav[26] = {NULL}; // like node *list in list and hashtable programs
+trie *root = trie;
 
 
 int main()
