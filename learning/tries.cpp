@@ -15,6 +15,7 @@ typedef struct trie
 
 // prototypes
 void append();
+unsigned int letter(string word, int letter);
 
 
 int main()
@@ -35,4 +36,25 @@ int main()
         }
     } while (cont == 'Y');
 }
+
+unsigned int letter(string word, int letter)
+{
+
+}
+
+void append()
+{
+    // door is the number we will unlock, string simply opens the doors
+    int door;
+    string word;
+
+
+    cout << "Please input a word to add to this list: " << endl;
+    cin >> word;
+
+    
+
+}
+
+
 
