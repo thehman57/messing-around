@@ -19,7 +19,7 @@ void append();
 unsigned int letter(string word, int letter);
 
 // global var
-trie *root = trie;
+trie *root = trie; 
 
 
 int main()
