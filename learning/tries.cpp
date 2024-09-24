@@ -76,7 +76,7 @@ void append()
         door = letter(word, x);
         if (n->child[door] == NULL)
         {
-            n->child[door] = (trie*)malloc(sizeof(trie)); // must allocate memory before moving there
+            n->child[door] = new trie(); // must allocate memory before moving there
                                                           // reason it is a different here is because you make children
             n->isEnd = false;
             n = n->child[door];
