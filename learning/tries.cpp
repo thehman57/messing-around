@@ -17,6 +17,9 @@ typedef struct trie
 void append();
 unsigned int letter(string word, int letter);
 
+// global var
+trie *trav[26] = {NULL}; // like node *list in list and hashtable programs
+
 
 int main()
 {
