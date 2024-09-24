@@ -57,6 +57,6 @@ void append()
 
     for (int letter = 0; letter < strlen(name); letter++)
     {
-        
+        cout << "Hello world!" << endl;
     }
 }
