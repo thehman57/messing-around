@@ -19,7 +19,7 @@ void append();
 unsigned int letter(string word, int letter);
 
 // global var
-trie *root = trie; 
+trie *root = trie;
 
 
 int main()
@@ -56,7 +56,10 @@ void append()
     cout << "Please input a word to add to this list: " << endl;
     cin >> word;
 
-
+    for(int x = 0; x < size(word); x ++)
+    {
+        
+    }
 
 }
 
