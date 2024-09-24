@@ -77,7 +77,8 @@ void append()
         if (n->child[door] == NULL)
         {
             n->child[door] = new trie(); // must allocate memory before moving there
-                                                          // reason it is a different here is because you make children
+                                         // reason it is a different here is because you make children
+                                         // new keeps all formerly-initialized parts of your og node
             n->isEnd = false;
             n = n->child[door];
             //n->character = word[x];
