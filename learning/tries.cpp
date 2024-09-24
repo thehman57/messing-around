@@ -16,7 +16,7 @@ typedef struct trie
 
 // prototypes
 void append();
-unsigned int letter(string word, int letter);
+unsigned int letter(string word, int x);
 void search();
 
 // global var
@@ -54,9 +54,9 @@ int main()
     } while (cont == 'Y');
 }
 
-unsigned int letter(string word, int letter)
+unsigned int letter(string word, int x)
 {
-    return toupper((word[letter]) - 'A');
+    return toupper(word[x]) - 'A';
 }
 
 void append()
