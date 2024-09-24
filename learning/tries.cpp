@@ -10,7 +10,7 @@ using namespace std;
 typedef struct trie
 {
     char character;
-    struct trie *paths[26] = {NULL}; // 26 is the amount of letters in the alphabet
+    struct trie *child[26] = {NULL}; // 26 is the amount of letters in the alphabet
     bool isEnd = false;
 } trie;
 
@@ -19,7 +19,7 @@ void append();
 unsigned int letter(string word, int letter);
 
 // global var
-trie *root = trie;
+trie *root = (trie*)malloc(sizeof(trie));
 
 
 int main()
@@ -58,7 +58,8 @@ void append()
 
     for(int x = 0; x < size(word); x ++)
     {
-        
+        door = letter(word, x);
+        if (root->child[door])
     }
 
 }
