@@ -64,6 +64,7 @@ int main()
         {
             kill();
             main();
+            break;
         }
     } while (cont == 'Y');
 }
