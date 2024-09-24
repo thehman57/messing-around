@@ -81,7 +81,7 @@ void append()
                                          //we used new instead because its better, it keeps all original
                                          // part of a node (such as child is NULL)
             n->isEnd = false;
-            //n = n->child[door];
+            n = n->child[door];
             //n->character = word[x];
         }
         else
