@@ -9,63 +9,25 @@ using namespace std;
 // trying to make a trie data structure
 typedef struct trie
 {
-    struct trie *paths[26]; // 26 is the amount of letters in the alphabet
+    struct trie *paths[26] = {NULL}; // 26 is the amount of letters in the alphabet
     bool isEnd = false;
 } trie;
 
-
-//global pointer variable
-trie *list[26] = {NULL};
-
-//prototypes
-unsigned int direct(string name, int letter); // this will be used to get paths
+// prototypes
 void append();
+
 
 int main()
 {
     char cont = 'Y';
-    cout << "This is a test on my knowledge of tries." << endl << endl;
+
+    cout << "This is a test of my knowledge on tries:" << endl << endl;
 
     do
     {
-        cout << "Would you like to add a name to the trie?" << endl;
+        cout << "Would you like to add a word to the trie?" << endl;
         cin >> cont;
         cont = toupper(cont);
-
-        if (cont == 'Y')
-        {
-            append();
-        }
-    }while (cont == 'Y');
-
-    return 0;
+    } while (cont == 'Y');
 }
 
-unsigned int direct(string name, int letter)
-{
-    return toupper(name[letter]) - 'A';
-}
-
-void append()
-{
-    int path;
-    string name;
-
-    cout << "Please input a name you would like to validate:" << endl;
-    cin >> name;
-
-    for (int letter = 0; letter < size(name); letter++)
-    {
-        path = direct(name, letter);
-        if (list[letter][path] == NULL)
-        {
-            trie *n = (trie*)malloc(sizeof(trie));
-
-        }
-        else
-        {
-            continue;
-        }
-
-    }
-}
