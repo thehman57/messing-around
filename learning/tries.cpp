@@ -87,7 +87,7 @@ void append()
     trie *n = root; // get n back to the root
 
     for(int x = 0; x < size(word); x ++)
-    {
+    { 
         door = letter(word, x);
         if (n->child[door] == NULL)
         {
