@@ -9,6 +9,7 @@ using namespace std;
 // trying to make a trie data structure
 typedef struct trie
 {
+    char character;
     struct trie *paths[26] = {NULL}; // 26 is the amount of letters in the alphabet
     bool isEnd = false;
 } trie;
@@ -55,7 +56,7 @@ void append()
     cout << "Please input a word to add to this list: " << endl;
     cin >> word;
 
-    
+
 
 }
 
