@@ -53,6 +53,7 @@ unsigned int direct(string name, int letter)
 
 void append()
 {
+    int path;
     string name;
 
     cout << "Please input a name you would like to validate:" << endl;
@@ -60,6 +61,10 @@ void append()
 
     for (int letter = 0; letter < size(name); letter++)
     {
-        
+        path = direct(name, letter);
+        if (list[letter][path] == NULL)
+        {
+            
+        }
     }
 }
