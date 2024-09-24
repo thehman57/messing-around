@@ -67,8 +67,12 @@ void append()
             n = n->child[door];
             n->character = word[x];
         }
+        else
+        {
+            n = n->child[door];
+        }
     }
-
+    n->isEnd = true;
 }
 
 
