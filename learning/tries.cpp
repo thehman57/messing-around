@@ -126,5 +126,38 @@ void search()
     return;
 }
 
+void delete()
+{
+    // open is the number door we will unlock , word simply gives me the key
+    int open;
+    string word;
+
+    cout << "Please give me a word to test and see if exists:" << endl;
+    cin >> word;
+
+    trie *n = root; //return n to root
+
+    for (int x = 0; x < size(word); x ++)
+    {
+        open = letter(word,x);
+
+        if(n->child[open] == NULL)
+        {
+            cout << "Word not found!" << endl;
+            return; // because you can just return a void function if you return nothing with it
+        }
+        n = n->child[open];
+    }
+    if (n->isEnd == true)
+    {
+        n->isEnd = false;
+        cout << "Word deleted!" << endl;
+    }
+    else
+    {
+        cout << "Word not found!" << endl;
+    }
+    return;
+}
 
 
