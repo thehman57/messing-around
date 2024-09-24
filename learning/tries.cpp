@@ -9,7 +9,7 @@ using namespace std;
 // trying to make a trie data structure
 typedef struct trie
 {
-    //string character;
+    string character;
     struct trie *child[26] = {NULL}; // 26 is the amount of letters in the alphabet
     bool isEnd = false;
 } trie;
@@ -82,7 +82,7 @@ void append()
                                          // part of a node (such as child is NULL)
             n->isEnd = false;
             n = n->child[door];
-            //n->character = word[x];
+            n->character = word[x];
         }
         else
         {
