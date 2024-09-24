@@ -56,7 +56,7 @@ int main()
 
 unsigned int letter(string word, int letter)
 {
-    return toupper(word[letter] - 'A');
+    return toupper((word[letter]) - 'A');
 }
 
 void append()
