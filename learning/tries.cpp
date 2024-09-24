@@ -20,7 +20,7 @@ unsigned int letter(string word, int letter);
 void search();
 
 // global var
-trie *root = (trie*)malloc(sizeof(trie)); // allocate memory as to have a root
+trie *root = new trie(); // allocate memory as to have a root
 
 
 int main()
@@ -78,7 +78,8 @@ void append()
         {
             n->child[door] = new trie(); // must allocate memory before moving there
                                          // reason it is a different here is because you make children
-                                         // new keeps all formerly-initialized parts of your og node
+                                         //we used new instead because its better, it keeps all original
+                                         // part of a node (such as child is NULL)
             n->isEnd = false;
             n = n->child[door];
             //n->character = word[x];
