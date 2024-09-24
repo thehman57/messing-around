@@ -64,7 +64,12 @@ void append()
         path = direct(name, letter);
         if (list[letter][path] == NULL)
         {
-            
+            trie *n = (trie*)malloc(sizeof(trie));
         }
+        else
+        {
+            continue;
+        }
+        
     }
 }
