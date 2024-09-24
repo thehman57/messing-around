@@ -35,12 +35,15 @@ int main()
     {
         cout << "Would you like to add a name to the trie?" << endl;
         cin >> cont;
+        cont = toupper(cont);
 
         if (cont == 'Y')
         {
             append();
         }
     }while (cont == 'Y');
+
+    return 0;
 }
 
 unsigned int direct(string name, int letter)
@@ -55,8 +58,8 @@ void append()
     cout << "Please input a name you would like to validate:" << endl;
     cin >> name;
 
-    for (int letter = 0; letter < strlen(name); letter++)
+    for (int letter = 0; letter < size(name); letter++)
     {
-        cout << "Hello world!" << endl;
+        
     }
 }
