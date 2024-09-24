@@ -94,7 +94,6 @@ void append()
                                          // reason it is a different here is because you make children
                                          //we used new instead because its better, it keeps all original
                                          // part of a node (such as child is NULL)
-            n->isEnd = false;
             n = n->child[door];
             n->character = word[x];
         }
