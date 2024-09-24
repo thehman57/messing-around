@@ -28,6 +28,11 @@ int main()
         cout << "Would you like to add a word to the trie?" << endl;
         cin >> cont;
         cont = toupper(cont);
+
+        if (cont == 'Y')
+        {
+            append();
+        }
     } while (cont == 'Y');
 }
 
