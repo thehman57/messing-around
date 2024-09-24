@@ -40,6 +40,18 @@ int main()
             append();
         }
     } while (cont == 'Y');
+
+    do
+    {
+        cout << "Would you like to search for something?" << endl;
+        cin >> cont;
+        cont = toupper(cont);
+
+        if (cont == 'Y')
+        {
+            search();
+        }
+    } while (cont == 'Y');
 }
 
 unsigned int letter(string word, int letter)
@@ -49,7 +61,7 @@ unsigned int letter(string word, int letter)
 
 void append()
 {
-    // door is the number we will unlock, string simply opens the doors
+    // door is the number we will unlock, word simply opens the doors
     int door;
     string word;
 
@@ -79,7 +91,35 @@ void append()
 
 void search()
 {
-    
+    // open is the number door we will unlock , word simply gives me the key
+    int open;
+    string word;
+
+    cout << "Please give me a word to test and see if exists:" << endl;
+    cin >> word;
+
+    trie *n = root; //return n to root
+
+    for (int x = 0; x < size(word); x ++)
+    {
+        open = letter(word,x);
+
+        if(n->child[open] == NULL)
+        {
+            cout << "Word not found!" << endl;
+            return; // because you can just return a void function if you return nothing with it
+        }
+        n = n->child[open];
+    }
+    if (n->isEnd == true)
+    {
+        cout << "Word does exist!" << endl;
+    }
+    else
+    {
+        cout << "Word not found!" << endl;
+    }
+    return;
 }
 
 
