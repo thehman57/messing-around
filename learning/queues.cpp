@@ -18,4 +18,20 @@ queue q;
 queue *start = NULL;
 
 void enqueue();
+void dequeue();
+
+int main
+{
+    char cont = 'Y';
+    return 0;
+}
+
+void enqueue()
+{
+
+}
+
 void dequeue()
+{
+
+}
