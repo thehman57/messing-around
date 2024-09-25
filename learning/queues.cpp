@@ -8,9 +8,14 @@ const int CAPACITY = 10;
 
 typedef struct queue
 {
-    VALUE array[CAPACITY];
+    int array[CAPACITY];
     int front;
     int size;
 }queue;
 
-queue *
+queue q;
+
+queue *start = NULL;
+
+void enqueue();
+void dequeue()
