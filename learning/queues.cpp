@@ -13,8 +13,6 @@ typedef struct queue
     int size;
 }queue;
 
-queue q;
-
 queue *start = NULL;
 
 void enqueue();
@@ -77,5 +75,5 @@ void dequeue()
 
 void output()
 {
-    
+
 }
