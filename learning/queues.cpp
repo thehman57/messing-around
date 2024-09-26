@@ -8,7 +8,7 @@ const int CAPACITY = 10;
 
 typedef struct queue
 {
-    int array[CAPACITY];
+    int array[CAPACITY] = {0};
     int front;
     int size;
 }queue;
@@ -24,6 +24,11 @@ int main
 {
     char cont = 'Y';
     cout << "This is to test my knowledge on queues." << endl << endl;
+
+    do
+    {
+        cout << "Would you like to add a number to the queue?" << endl;
+    }
     return 0;
 }
 
