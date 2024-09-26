@@ -74,3 +74,8 @@ void dequeue()
 {
 
 }
+
+void output()
+{
+    
+}
