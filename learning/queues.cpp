@@ -23,6 +23,7 @@ void dequeue();
 int main
 {
     char cont = 'Y';
+    cout << "This is to test my knowledge on queues." << endl << endl;
     return 0;
 }
 
