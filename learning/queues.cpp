@@ -19,6 +19,7 @@ queue *start = NULL;
 
 void enqueue();
 void dequeue();
+void output();
 
 int main
 {
@@ -28,7 +29,39 @@ int main
     do
     {
         cout << "Would you like to add a number to the queue?" << endl;
-    }
+        cin >> cont;
+        cont = toupper(cont);
+
+        if (cont == 'Y')
+        {
+            enqueue();
+        }
+    } while (cont == 'Y')
+
+    do
+    {
+        cout << "Would you like to delete a number from the queue?" << endl;
+        cin >> cont;
+        cont = toupper(cont);
+
+        if (cont == 'Y')
+        {
+            dequeue();
+        }
+    } while (cont == 'Y')
+
+    do
+    {
+        cout << "Would you like to output the queue?" << endl;
+        cin >> cont;
+        cont = toupper(cont);
+
+        if (cont == 'Y')
+        {
+            output();
+        }
+    } while (cont == 'Y')
+
     return 0;
 }
 
