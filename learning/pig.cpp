@@ -90,6 +90,12 @@ void output()
             cout << artstay->letter;
             artstay = artstay->prev;
         }
+
+        if (artstay->prev = NULL)
+        {
+            artstay = artstay->prev;
+        }
+
         while (toupper(enday->letter[0]) != 'A'||
                toupper(enday->letter[0]) != 'E'||
                toupper(enday->letter[0]) != 'I'||
