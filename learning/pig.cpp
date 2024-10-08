@@ -66,6 +66,8 @@ void append(string sent)
 
 void output()
 {
+    artstay = artstay->next;
+    enday = enday->next;
     while (artstay != NULL)
     {
         cout << artstay->letter;
