@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <iostream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
@@ -68,11 +68,11 @@ void output()
 {
     artstay = artstay->next;
     enday = enday->next;
-    while (tolower(artstay->letter) != 97  ||
-           tolower(artstay->letter) != 101 ||
-           tolower(artstay->letter) != 105 ||
-           tolower(artstay->letter) != 111 ||
-           tolower(artstay->letter) != 117   )
+    while (artstay->letter != 97  ||
+           artstay->letter != 101 ||
+           artstay->letter != 105 ||
+           artstay->letter != 111 ||
+           artstay->letter != 117   )
     {
         cout << artstay->letter;
         artstay = artstay->next;
