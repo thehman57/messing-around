@@ -96,14 +96,14 @@ void output()
                toupper(enday->letter[0]) != 'O'||
                toupper(enday->letter[0]) != 'U')
         {
-            if (enday->prev == NULL || enday->letter[0] == 32)
+            if (enday->prev == NULL)
             {
-                //cout << enday->letter;
+                cout << enday->letter;
                 break;
             }
-            cout << enday->letter;
             enday = enday->prev;
         }
+        enday = artstay;
         cout << " ";
         print = false;
     }
