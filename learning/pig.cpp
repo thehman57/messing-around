@@ -26,7 +26,7 @@ bool print = false;
 // prototypes
 void append(string sent);
 void foutput();
-void boutput();
+//void boutput();
 
 int main()
 {
@@ -67,15 +67,10 @@ void append(string sent)
 void foutput()
 {
     // check for vowels
-    for (artstay; artstay->next != NULL; artstay = artstay->next)
+    for (artstay; artstay != NULL; artstay = artstay->prev)
     {
         cout << artstay->letter;
     }
 
-}
-
-void boutput()
-{
-    // check for vowels
 }
 
