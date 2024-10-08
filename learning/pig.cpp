@@ -101,6 +101,7 @@ void output()
                 cout << enday->letter;
                 break;
             }
+            cout << enday->letter;
             enday = enday->prev;
         }
         enday = artstay;
