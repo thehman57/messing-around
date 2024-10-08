@@ -13,35 +13,36 @@ typedef struct node
     string letter;
     struct node *next;
     struct node *prev;
-} letter;
+}node;
 
 // beginning and end of word variables
 node *enday = NULL;
 node *artstay = NULL;
 
 // prototypes
-void append(string sentence);
+void append(string sent);
 void output();
 
 int main()
 {
-    string sentence;
+    string sent;
 
     cout << "Input a string to be converted to Pig-Latin: " << endl;
-    getline(cin, sentence);
+
+    getline(cin, sent);
 
     cout << "hello world";
-    append(sentence);
+    append(sent);
     output();
 
-    cout << sentence;
+    cout << sent;
 
     return 0;
 }
 
-void append(string sentence)
+void append(string sent)
 {
-    for (int x = 0; x < size(sentence); x++)
+    for (int x = 0; x < size(sent); x++)
     {
         node *n = new node();
 
@@ -55,7 +56,7 @@ void append(string sentence)
         {
             n = n->next;
         }
-        n->letter = sentence[x];
+        n->letter = sent[x];
 
     }
 }
