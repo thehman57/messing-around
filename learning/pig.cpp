@@ -80,38 +80,11 @@ void output()
 
     if (print == true)
     {
-        while (artstay->letter[0] != 32)
-        {
-            if (artstay->prev == NULL)
-            {
-                cout << artstay->letter;
-                break;
-            }
-            cout << artstay->letter;
-            artstay = artstay->prev;
-        }
+       cout << artstay->letter;
+    }
 
-        if (artstay->prev = NULL)
-        {
-            artstay = artstay->prev;
-        }
-
-        while (toupper(enday->letter[0]) != 'A'||
-               toupper(enday->letter[0]) != 'E'||
-               toupper(enday->letter[0]) != 'I'||
-               toupper(enday->letter[0]) != 'O'||
-               toupper(enday->letter[0]) != 'U')
-        {
-            if (enday->prev == NULL)
-            {
-                cout << enday->letter;
-                break;
-            }
-            cout << enday->letter;
-            enday = enday->prev;
-        }
-        enday = artstay;
-        cout << " ";
+    if (artstay->letter[0] == 32)
+    {
         print = false;
     }
 
