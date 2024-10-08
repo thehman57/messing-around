@@ -68,11 +68,11 @@ void output()
 {
     artstay = artstay->next;
     enday = enday->next;
-    while (tolower(artstay->letter) != "a" ||
-           tolower(artstay->letter) != "e" ||
-           tolower(artstay->letter) != "i" ||
-           tolower(artstay->letter) != "o" ||
-           tolower(artstay->letter) != "u"   )
+    while (tolower(artstay->letter) != 97  ||
+           tolower(artstay->letter) != 101 ||
+           tolower(artstay->letter) != 105 ||
+           tolower(artstay->letter) != 111 ||
+           tolower(artstay->letter) != 117   )
     {
         cout << artstay->letter;
         artstay = artstay->next;
