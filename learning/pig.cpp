@@ -115,8 +115,9 @@ void boutput()
         if (enday->next != NULL)
         {
             enday = enday->next;
+            boutput();
         }
-        boutput();
+        return;
     }
 }
 
