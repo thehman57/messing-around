@@ -109,7 +109,6 @@ void output()
         print = false;
     }
 
-
     if (artstay->prev != NULL)
     {
         artstay = artstay->prev;
