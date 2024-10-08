@@ -68,21 +68,22 @@ void append(string sent)
 
 void output()
 {
-    if (toupper(artstay->letter[0]) == 'A'
-        toupper(artstay->letter[0]) == 'E'
-        toupper(artstay->letter[0]) == 'I'
-        toupper(artstay->letter[0]) == 'O'
+    if (toupper(artstay->letter[0]) == 'A'||
+        toupper(artstay->letter[0]) == 'E'||
+        toupper(artstay->letter[0]) == 'I'||
+        toupper(artstay->letter[0]) == 'O'||
         toupper(artstay->letter[0]) == 'U')
     {
         print = true;
     }
     if (print == true)
     {
-        while (artstay->letter[0] != " ")
+        while (artstay->letter[0] != 32)
         {
             cout << artstay->letter;
-            artstay = artstay->next;
+            artstay = artstay->prev;
         }
+        print = false;
     }
 
     if (artstay->prev != NULL)
