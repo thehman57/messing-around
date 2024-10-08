@@ -76,6 +76,8 @@ void output()
     {
         print = true;
     }
+
+
     if (print == true)
     {
         while (artstay->letter[0] != 32)
@@ -88,9 +90,25 @@ void output()
             cout << artstay->letter;
             artstay = artstay->prev;
         }
+        while (toupper(enday->letter[0]) != 'A'||
+               toupper(enday->letter[0]) != 'E'||
+               toupper(enday->letter[0]) != 'I'||
+               toupper(enday->letter[0]) != 'O'||
+               toupper(enday->letter[0]) != 'U')
+        {
+            if (enday->prev == NULL)
+            {
+                cout << enday->letter;
+                break;
+            }
+            cout << enday->letter;
+            enday = enday->prev;
+        }
         cout << " ";
         print = false;
     }
+
+
     if (artstay->prev != NULL)
     {
         artstay = artstay->prev;
