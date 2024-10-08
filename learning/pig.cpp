@@ -96,9 +96,9 @@ void output()
                toupper(enday->letter[0]) != 'O'||
                toupper(enday->letter[0]) != 'U')
         {
-            if (enday->prev == NULL || enday == artstay)
+            if (enday->prev == NULL || enday->letter[0] == 32)
             {
-                cout << enday->letter;
+                //cout << enday->letter;
                 break;
             }
             cout << enday->letter;
