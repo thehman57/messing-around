@@ -15,10 +15,13 @@ typedef struct node
     struct node *prev;
 }node;
 
-// beginning and end of word variables
+// beginning and end of word variables + pointer variable
 node *enday = NULL;
 node *artstay = NULL;
 node *list = NULL;
+
+// global varables
+bool print = false;
 
 // prototypes
 void append(string sent);
@@ -29,12 +32,9 @@ int main()
     string sent;
 
     cout << "Input a string to be converted to Pig-Latin: " << endl;
-
     getline(cin, sent);
 
     append(sent);
-
-    cout << "Worked!\n";
     output();
 
 
@@ -68,12 +68,29 @@ void append(string sent)
 
 void output()
 {
-    while (artstay != NULL)
+    if (toupper(artstay->letter[0]) == 'A'
+        toupper(artstay->letter[0]) == 'E'
+        toupper(artstay->letter[0]) == 'I'
+        toupper(artstay->letter[0]) == 'O'
+        toupper(artstay->letter[0]) == 'U')
     {
-        if (toupper(artstay->letter[0]) != 'A')
-        {
-            cout << artstay->letter[0];
-        }
-        artstay = artstay->prev;
+        print = true;
     }
+    if (print == true)
+    {
+        while (artstay->letter[0] != " ")
+        {
+            cout << artstay->letter;
+            artstay = artstay->next;
+        }
+    }
+
+    if (artstay->prev != NULL)
+    {
+        artstay = artstay->prev;
+        output();
+    }
+    return;
+
+
 }
