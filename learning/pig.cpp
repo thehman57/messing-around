@@ -70,7 +70,10 @@ void output()
     enday = enday->next;
     while (artstay->next != NULL)
     {
-        if (strcmp(toupper(artstay->letter)))
+        if (strcmp(toupper(artstay->letter), "A") != 0)
+        {
+            cout << artstay->letter;
+        }
         artstay = artstay->next;
     }
 }
