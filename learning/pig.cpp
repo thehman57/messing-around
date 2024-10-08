@@ -70,7 +70,8 @@ void output()
     enday = enday->next;
     while (artstay)
     {
-        cout << artstay->letter;
+        string l = artstay->letter;
+        cout << l;
         artstay = artstay->next;
     }
 }
