@@ -71,12 +71,15 @@ void output()
     while (artstay)
     {
         string l = artstay->letter;
-        if (tolower(l) != "a" ||
-            tolower(l) != "e" ||
-            tolower(l) != "i" ||
-            tolower(l) != "o" ||
-            tolower(l) != "u"   )
-        cout << l;
+        if (l != 97 ||
+            l != 101 ||
+            l != 105 ||
+            l != 111 ||
+            l != 117   )
+            {
+                cout << l;
+            }
+
         artstay = artstay->next;
     }
 }
