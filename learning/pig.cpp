@@ -80,8 +80,11 @@ void output()
     {
         while (artstay->letter[0] != 32)
         {
-            cout << artstay->letter;
-            artstay = artstay->prev;
+            if (artstay->prev != NULL)
+            {
+                cout << artstay->letter;
+                artstay = artstay->prev;
+            }
         }
         print = false;
     }
