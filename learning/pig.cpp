@@ -96,7 +96,7 @@ void output()
                toupper(enday->letter[0]) != 'O'||
                toupper(enday->letter[0]) != 'U')
         {
-            if (enday->prev == NULL)
+            if (enday->prev == NULL || enday == artstay)
             {
                 cout << enday->letter;
                 break;
