@@ -18,6 +18,7 @@ typedef struct node
 // beginning and end of word variables
 node *enday = NULL;
 node *artstay = NULL;
+node *list = NULL;
 
 // prototypes
 void append(string sent);
@@ -46,10 +47,7 @@ void append(string sent)
     {
         node *n = new node();
 
-        while (n->next != NULL)
-        {
-            n = n->next;
-        }
+        
 
         if (x == 0)
         {
