@@ -68,6 +68,7 @@ void append(string sent)
 
 void output()
 {
+    // check for vowels
     if (toupper(artstay->letter[0]) == 'A'||
         toupper(artstay->letter[0]) == 'E'||
         toupper(artstay->letter[0]) == 'I'||
@@ -76,16 +77,29 @@ void output()
     {
         print = true;
     }
-
-
+    // output the front half of the words
     if (print == true)
     {
        cout << artstay->letter;
     }
-
     if (artstay->letter[0] == 32)
     {
         print = false;
+    }
+
+    //output the back half of words
+    if (toupper(enday->letter[0]) == 'A'||
+        toupper(enday->letter[0]) == 'E'||
+        toupper(enday->letter[0]) == 'I'||
+        toupper(enday->letter[0]) == 'O'||
+        toupper(enday->letter[0]) == 'U')
+    {
+        enday = artstay;
+    }
+    else
+    {
+        cout << enday->letter;
+        
     }
 
     if (artstay->prev != NULL)
