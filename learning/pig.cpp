@@ -60,16 +60,17 @@ void append(string sent)
             artstay = n;
             enday = n;
         }
-
-
         n->letter = sent[x];
-
     }
 }
 
 void foutput()
 {
     // check for vowels
+    for (artstay; artstay->next != NULL; artstay = artstay->next)
+    {
+        cout << artstay->letter;
+    }
 
 }
 
