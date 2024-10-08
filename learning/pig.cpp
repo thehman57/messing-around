@@ -79,15 +79,17 @@ void foutput()
         print = true;
     }
     // output the front half of the words
-    if (print == true)
-    {
-       cout << artstay->letter;
-    }
     if (artstay->letter[0] == 32)
     {
         print = false;
         boutput();
+        cout << artstay->letter;
     }
+    if (print == true)
+    {
+       cout << artstay->letter;
+    }
+
 
     if (artstay->prev != NULL)
     {
@@ -112,9 +114,9 @@ void boutput()
     else
     {
         cout << enday->letter;
-        if (enday->next != NULL)
+        if (enday->prev != NULL)
         {
-            enday = enday->next;
+            enday = enday->prev;
             boutput();
         }
         return;
