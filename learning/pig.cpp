@@ -31,8 +31,9 @@ int main()
 
     getline(cin, sent);
 
-    cout << "hello world";
     append(sent);
+
+    cout << "Worked!\n";
     output();
 
     cout << sent;
