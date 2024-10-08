@@ -36,7 +36,7 @@ int main()
     getline(cin, sent);
 
     append(sent);
-    output();
+    foutput();
 
 
     return 0;
@@ -86,6 +86,7 @@ void foutput()
     if (artstay->letter[0] == 32)
     {
         print = false;
+        boutput();
     }
 
     if (artstay->prev != NULL)
@@ -98,5 +99,24 @@ void foutput()
 
 void boutput()
 {
-    
+    // check for vowels
+    if (toupper(enday->letter[0]) == 'A'||
+        toupper(enday->letter[0]) == 'E'||
+        toupper(enday->letter[0]) == 'I'||
+        toupper(enday->letter[0]) == 'O'||
+        toupper(enday->letter[0]) == 'U')
+    {
+        enday = artstay;
+        return;
+    }
+    else
+    {
+        cout << enday->letter;
+        if (enday->next != NULL)
+        {
+            enday = enday->next;
+        }
+        boutput();
+    }
 }
+
