@@ -47,7 +47,12 @@ void append(string sent)
     {
         node *n = new node();
 
-        
+        n->next = list;
+        if (list != NULL)
+        {
+            list->prev = n;
+        }
+        list = n;
 
         if (x == 0)
         {
@@ -71,6 +76,6 @@ void output()
         {
             cout << artstay->letter[0];
         }
-        artstay = artstay->next;
+        artstay = artstay->prev;
     }
 }
