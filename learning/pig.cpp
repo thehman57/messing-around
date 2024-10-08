@@ -70,56 +70,11 @@ void append(string sent)
 void foutput()
 {
     // check for vowels
-    if (toupper(artstay->letter[0]) == 'A'||
-        toupper(artstay->letter[0]) == 'E'||
-        toupper(artstay->letter[0]) == 'I'||
-        toupper(artstay->letter[0]) == 'O'||
-        toupper(artstay->letter[0]) == 'U')
-    {
-        print = true;
-    }
-    // output the front half of the words
-    if (artstay->letter[0] == 32)
-    {
-        print = false;
-        boutput();
-        cout << artstay->letter;
-    }
-    if (print == true)
-    {
-       cout << artstay->letter;
-    }
 
-
-    if (artstay->prev != NULL)
-    {
-        artstay = artstay->prev;
-        foutput();
-    }
-    return;
 }
 
 void boutput()
 {
     // check for vowels
-    if (toupper(enday->letter[0]) == 'A'||
-        toupper(enday->letter[0]) == 'E'||
-        toupper(enday->letter[0]) == 'I'||
-        toupper(enday->letter[0]) == 'O'||
-        toupper(enday->letter[0]) == 'U')
-    {
-        enday = artstay;
-        return;
-    }
-    else
-    {
-        cout << enday->letter;
-        if (enday->prev != NULL)
-        {
-            enday = enday->prev;
-            boutput();
-        }
-        return;
-    }
 }
 
