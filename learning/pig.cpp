@@ -68,18 +68,9 @@ void output()
 {
     artstay = artstay->next;
     enday = enday->next;
-    while (artstay)
+    while (artstay->next != NULL)
     {
-        string l = artstay->letter;
-        if (l != 97 ||
-            l != 101 ||
-            l != 105 ||
-            l != 111 ||
-            l != 117   )
-            {
-                cout << l;
-            }
-
+        if (strcmp(toupper(artstay->letter)))
         artstay = artstay->next;
     }
 }
