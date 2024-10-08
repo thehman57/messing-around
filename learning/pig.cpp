@@ -68,11 +68,7 @@ void output()
 {
     artstay = artstay->next;
     enday = enday->next;
-    while (artstay->letter != 97  ||
-           artstay->letter != 101 ||
-           artstay->letter != 105 ||
-           artstay->letter != 111 ||
-           artstay->letter != 117   )
+    while (artstay->letter == "a")
     {
         cout << artstay->letter;
         artstay = artstay->next;
