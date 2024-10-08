@@ -68,7 +68,7 @@ void output()
 {
     artstay = artstay->next;
     enday = enday->next;
-    while (artstay->letter == "a")
+    while (artstay)
     {
         cout << artstay->letter;
         artstay = artstay->next;
