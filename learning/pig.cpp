@@ -68,11 +68,11 @@ void output()
 {
     artstay = artstay->next;
     enday = enday->next;
-    while (artstay->next != NULL)
+    while (artstay != NULL)
     {
-        if (strcmp(toupper(artstay->letter), "A") != 0)
+        if (toupper(artstay->letter[0] != 'A'))
         {
-            cout << artstay->letter;
+            cout << artstay->letter[0];
         }
         artstay = artstay->next;
     }
