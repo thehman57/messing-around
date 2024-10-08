@@ -46,16 +46,18 @@ void append(string sent)
     {
         node *n = new node();
 
+        while (n->next != NULL)
+        {
+            n = n->next;
+        }
+
         if (x == 0)
         {
             artstay = n;
             enday = n;
         }
 
-        while (n != NULL)
-        {
-            n = n->next;
-        }
+
         n->letter = sent[x];
 
     }
