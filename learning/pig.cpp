@@ -36,7 +36,6 @@ int main()
     cout << "Worked!\n";
     output();
 
-    cout << sent;
 
     return 0;
 }
@@ -66,8 +65,8 @@ void append(string sent)
 
 void output()
 {
-    artstay = artstay->next;
-    enday = enday->next;
+    //artstay = artstay->next;
+    //enday = enday->next;
     while (artstay != NULL)
     {
         if (toupper(artstay->letter[0] != 'A'))
